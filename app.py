@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import pdfplumber
 import docx
-import markdown
 import json
 from pathlib import Path
 import requests
@@ -84,15 +83,37 @@ def main():
     selected_model = st.selectbox("Select a model to use", model_names)
 
     # File uploader
-    uploaded_files = st.file_uploader("Upload files", type=[ext for exts in SUPPORTED_FILE_TYPES.values() for ext in exts], accept_multiple_files=True)
+    uploaded_files = st.file_uploader(
+        "Upload files",
+        type=[ext for exts in SUPPORTED_FILE_TYPES.values() for ext in exts],
+        accept_multiple_files=True
+    )
 
+    # Handle file uploads
     if uploaded_files:
         for uploaded_file in uploaded_files:
             save_uploaded_file(uploaded_file)
         st.success("Files uploaded and saved successfully!")
+        # No need to rerun; the UI will update automatically
+
+    # Refresh the list of existing files
+    existing_files = list(Path(DATA_FOLDER).glob("*"))
+
+    # Manage existing files in the data folder using a sidebar combo box
+    if existing_files:
+        st.sidebar.write("### Manage Existing Files")
+        selected_file = st.sidebar.selectbox(
+            "Select a file to delete", [file.name for file in existing_files]
+        )
+        if st.sidebar.button("Delete Selected File"):
+            file_to_delete = Path(DATA_FOLDER) / selected_file
+            if file_to_delete.exists():
+                os.remove(file_to_delete)
+                st.sidebar.success(f"Deleted {selected_file}")
+                # Update the list of existing files after deletion
+                existing_files = list(Path(DATA_FOLDER).glob("*"))
 
     # Process all files in data folder
-    existing_files = list(Path(DATA_FOLDER).glob("*"))
     if existing_files:
         with st.expander("Extracted Content from Files"):
             for file in existing_files:
@@ -123,41 +144,41 @@ def main():
         prompt = f"You are a helpful assistant. The following is the content of the uploaded files:\n\n{all_text}\n\nAnswer the following question:\n{user_input}"
 
         # Send the prompt to the Ollama server with streaming enabled
-        url = "http://localhost:11434/api/generate"  # Using the endpoint that worked with curl
+        url = "http://localhost:11434/api/generate"
         headers = {"Content-Type": "application/json"}
         data = {
-            "model": selected_model,  # Use the selected model
+            "model": selected_model,
             "prompt": prompt
         }
-
-        # Placeholder for streaming response
-        response_placeholder = st.empty()
-        full_response = ""
 
         try:
             with requests.post(url, json=data, headers=headers, stream=True) as response:
                 if response.status_code == 200:
-                    # Process each chunk as it comes in
-                    for line in response.iter_lines():
-                        if line:
-                            try:
-                                # Parse the incoming JSON line
-                                parsed_obj = json.loads(line.decode('utf-8'))
-                                response_chunk = parsed_obj.get("response", "")
+                    # Create a container for the assistant's response
+                    with st.chat_message("assistant"):
+                        message_placeholder = st.empty()
+                        response_text = ""
+                        # Process each chunk as it comes in
+                        for line in response.iter_lines():
+                            if line:
+                                try:
+                                    # Parse the incoming JSON line
+                                    parsed_obj = json.loads(line.decode('utf-8'))
+                                    response_chunk = parsed_obj.get("response", "")
 
-                                # Accumulate and display the response
-                                full_response += response_chunk
-                                response_placeholder.chat_message("assistant").markdown(full_response)  # Update with Markdown formatting
+                                    # Accumulate and display the response
+                                    response_text += response_chunk
+                                    message_placeholder.markdown(response_text)
 
-                            except json.JSONDecodeError as e:
-                                st.error(f"Failed to parse JSON part: {e}")
-                                st.write("Problematic JSON part:", line)
+                                except json.JSONDecodeError as e:
+                                    st.error(f"Failed to parse JSON part: {e}")
+                                    st.write("Problematic JSON part:", line)
 
-                    # Update the chat history with the final response
-                    st.session_state.history.append({"role": "assistant", "content": full_response})
+                        # Update the chat history with the final response
+                        st.session_state.history.append({"role": "assistant", "content": response_text})
                 else:
                     st.error(f"Error communicating with Ollama server: {response.status_code}")
-                    st.error(response.text)  # Print server error message to debug
+                    st.error(response.text)
         except requests.exceptions.RequestException as e:
             st.error(f"Error communicating with Ollama server: {e}")
 
