@@ -8,3 +8,5 @@ qdrant-client
 sentence-transformers
 python-docx
 requests
+ollama
+openai

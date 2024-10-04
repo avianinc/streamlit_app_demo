@@ -3,11 +3,15 @@ services:
     image: qdrant/qdrant
     ports:
       - "6333:6333"
+    volumes:
+      - qdrant_storage:/qdrant/storage
 
   ollama:
     image: ollama/ollama:latest
     ports:
       - "11434:11434"
+    volumes:
+      - ./ollama_models:/root/.ollama/models  # Persist Ollama models
 
   streamlit_app:
     build:
@@ -18,6 +22,10 @@ services:
       - qdrant
       - ollama
     volumes:
-      - ./:/app  # Map the entire current directory to /app in the container
+      - ./:/app  # Live code updates
+      - ./ollama_models:/app/ollama_models  # Share models directory with Streamlit
     environment:
       - PYTHONUNBUFFERED=1
+
+volumes:
+  qdrant_storage:

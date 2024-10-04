@@ -1,0 +1,18 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Data files
+data/
+
+# Ollama models
+ollama_models/
+
+# Docker files
+docker-compose.override.yml
