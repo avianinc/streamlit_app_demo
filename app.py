@@ -36,48 +36,50 @@ if uploaded_file is not None:
                 + user_input
             )
 
-            # Send the prompt to the Ollama server
+            # Send the prompt to the Ollama server with streaming enabled
             url = "http://localhost:11434/api/generate"  # Using the endpoint that worked with curl
             headers = {"Content-Type": "application/json"}
             data = {
                 "model": "mistral",  # Replace with your model name
                 "prompt": prompt
             }
+
+            # Placeholder for streaming response
+            response_placeholder = st.empty()
+            full_response = ""
+
             try:
-                response = requests.post(url, json=data, headers=headers)
+                with requests.post(url, json=data, headers=headers, stream=True) as response:
+                    if response.status_code == 200:
+                        # Process each chunk as it comes in
+                        for line in response.iter_lines():
+                            if line:
+                                try:
+                                    # Parse the incoming JSON line
+                                    parsed_obj = json.loads(line.decode('utf-8'))
+                                    response_chunk = parsed_obj.get("response", "")
 
-                # Read response content as text first
-                response_text = response.text
+                                    # Accumulate and display the response
+                                    full_response += response_chunk
+                                    response_placeholder.markdown(f"**Assistant:** {full_response}")  # Update with Markdown formatting
 
-                if response.status_code == 200:
-                    try:
-                        # Split the response text into separate JSON objects
-                        json_objects = response_text.splitlines()
-                        answer = ""
+                                except json.JSONDecodeError as e:
+                                    st.error(f"Failed to parse JSON part: {e}")
+                                    st.write("Problematic JSON part:", line)
 
-                        for json_obj in json_objects:
-                            try:
-                                # Load each JSON object and accumulate the response
-                                parsed_obj = json.loads(json_obj)
-                                answer += parsed_obj.get("response", "")
-                            except json.JSONDecodeError as e:
-                                st.error(f"Failed to parse JSON part: {e}")
-                                st.write("Problematic JSON part:", json_obj)
-
-                        # Add the accumulated response to history
-                        st.session_state.history.append({"role": "assistant", "content": answer})
-                    except Exception as e:
-                        st.error(f"Failed to process response: {e}")
-                        st.write("Response text:", response_text)  # Display full response to debug
-                else:
-                    st.error(f"Error communicating with Ollama server: {response.status_code}")
-                    st.error(response_text)  # Print server error message to debug
+                        # Update the chat history with the final response
+                        st.session_state.history.append({"role": "assistant", "content": full_response})
+                    else:
+                        st.error(f"Error communicating with Ollama server: {response.status_code}")
+                        st.error(response.text)  # Print server error message to debug
             except requests.exceptions.RequestException as e:
                 st.error(f"Error communicating with Ollama server: {e}")
 
     # Display chat history
     for chat in st.session_state.history:
         if chat['role'] == 'user':
-            st.write("**You:** " + chat['content'])
-        else:
-            st.write("**Assistant:** " + chat['content'])
+            st.write(f"**You:** {chat['content']}")
+        elif chat['role'] == 'assistant':
+            # Skip printing the final response again, since it was already displayed during streaming
+            if chat['content'] != full_response:
+                st.write(f"**Assistant:** {chat['content']}")
