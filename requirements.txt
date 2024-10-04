@@ -4,3 +4,5 @@ pdfplumber
 docx
 markdown
 openpyxl
+qdrant-client
+sentence-transformers

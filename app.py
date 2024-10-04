@@ -6,12 +6,31 @@ import docx
 import json
 from pathlib import Path
 import requests
+from qdrant_client import QdrantClient
+from qdrant_client.http import models as qdrant_models
+from sentence_transformers import SentenceTransformer
+import uuid  # Import uuid module
 
 DATA_FOLDER = "data"
 
 # Create data folder if it doesn't exist
 if not os.path.exists(DATA_FOLDER):
     os.makedirs(DATA_FOLDER)
+
+# Initialize Qdrant client (assuming Qdrant is running locally)
+qdrant_client = QdrantClient(host='localhost', port=6333)
+
+# Define the collection name
+COLLECTION_NAME = "document_chunks"
+
+# Create a collection if it doesn't exist
+try:
+    qdrant_client.get_collection(collection_name=COLLECTION_NAME)
+except Exception:
+    qdrant_client.recreate_collection(
+        collection_name=COLLECTION_NAME,
+        vectors_config=qdrant_models.VectorParams(size=384, distance=qdrant_models.Distance.COSINE),
+    )
 
 # Supported file types and their extensions
 SUPPORTED_FILE_TYPES = {
@@ -22,6 +41,9 @@ SUPPORTED_FILE_TYPES = {
     "Markdown": ["md"],
     "CSV": ["csv"]
 }
+
+# Initialize the embedding model
+embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Helper function to save uploaded file
 def save_uploaded_file(uploaded_file):
@@ -43,10 +65,10 @@ def extract_text_from_file(file_path):
             for para in doc.paragraphs:
                 extracted_text += para.text + "\n"
         elif file_extension == ".txt":
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 extracted_text = f.read()
         elif file_extension == ".md":
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 extracted_text = f.read()
         elif file_extension == ".csv":
             df = pd.read_csv(file_path)
@@ -60,6 +82,69 @@ def extract_text_from_file(file_path):
         extracted_text += f"\n[Error reading file {file_path.name}: {e}]"
 
     return extracted_text
+
+# Function to chunk text
+def chunk_text(text, chunk_size=500, overlap=100):
+    words = text.split()
+    chunks = []
+    for i in range(0, len(words), chunk_size - overlap):
+        chunk = ' '.join(words[i:i + chunk_size])
+        chunks.append(chunk)
+    return chunks
+
+# Function to process and store chunks in Qdrant
+def process_and_store_chunks(file_path):
+    text = extract_text_from_file(file_path)
+    st.write(f"Extracted text from {file_path.name}: {text[:100]}...")
+    chunks = chunk_text(text)
+    st.write(f"Number of chunks created: {len(chunks)}")
+    embeddings = embedding_model.encode(chunks)
+    st.write(f"Embeddings shape: {embeddings.shape}")
+    # Ensure embeddings have the expected dimension
+    if len(embeddings.shape) == 1 or embeddings.shape[1] != 384:
+        st.error(f"Unexpected embedding dimension: {embeddings.shape}")
+    payloads = [{'text': chunk, 'file_name': file_path.name} for chunk in chunks]
+    vectors = embeddings.tolist()
+    # Generate UUIDs for each vector
+    ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
+    points = [
+        qdrant_models.PointStruct(
+            id=ids[i],
+            vector=vectors[i],
+            payload=payloads[i]
+        )
+        for i in range(len(chunks))
+    ]
+    try:
+        qdrant_client.upsert(
+            collection_name=COLLECTION_NAME,
+            points=points
+        )
+        st.write(f"Successfully upserted {len(points)} points into Qdrant.")
+        count_result = qdrant_client.count(collection_name=COLLECTION_NAME)
+        st.write(f"Total points in Qdrant: {count_result.count}")
+    except Exception as e:
+        st.error(f"Error during upsert: {e}")
+
+# Function to retrieve relevant chunks from Qdrant
+def get_relevant_chunks(query, top_k=5):
+    query_embedding = embedding_model.encode([query])[0]
+    try:
+        search_result = qdrant_client.search(
+            collection_name=COLLECTION_NAME,
+            query_vector=query_embedding.tolist(),
+            limit=top_k,
+        )
+        st.write(f"Search result: {search_result}")
+        # Check if search_result is empty
+        if not search_result:
+            st.write("No relevant chunks found in Qdrant.")
+        # Extract the texts of the top matching chunks
+        relevant_chunks = [hit.payload['text'] for hit in search_result]
+        return relevant_chunks
+    except Exception as e:
+        st.error(f"Error during search: {e}")
+        return []
 
 # Streamlit UI
 def main():
@@ -93,7 +178,9 @@ def main():
     if uploaded_files:
         for uploaded_file in uploaded_files:
             save_uploaded_file(uploaded_file)
-        st.success("Files uploaded and saved successfully!")
+            file_path = Path(DATA_FOLDER) / uploaded_file.name
+            process_and_store_chunks(file_path)
+        st.success("Files uploaded, processed, and stored successfully!")
         # No need to rerun; the UI will update automatically
 
     # Refresh the list of existing files
@@ -110,6 +197,23 @@ def main():
             if file_to_delete.exists():
                 os.remove(file_to_delete)
                 st.sidebar.success(f"Deleted {selected_file}")
+                # Delete associated vectors from Qdrant using a Filter
+                try:
+                    qdrant_client.delete(
+                        collection_name=COLLECTION_NAME,
+                        # Use the `filter` parameter with `qdrant_models.Filter`
+                        filter=qdrant_models.Filter(
+                            must=[
+                                qdrant_models.FieldCondition(
+                                    key="file_name",
+                                    match=qdrant_models.MatchValue(value=selected_file)
+                                )
+                            ]
+                        )
+                    )
+                    st.write(f"Deleted vectors associated with {selected_file} from Qdrant.")
+                except Exception as e:
+                    st.error(f"Error deleting vectors from Qdrant: {e}")
                 # Update the list of existing files after deletion
                 existing_files = list(Path(DATA_FOLDER).glob("*"))
 
@@ -139,9 +243,16 @@ def main():
         st.session_state.history.append({"role": "user", "content": user_input})
         st.chat_message("user").markdown(user_input)
 
+        # Retrieve relevant chunks
+        relevant_chunks = get_relevant_chunks(user_input, top_k=5)
+        context = "\n".join(relevant_chunks)
+
         # Prepare the prompt
-        all_text = "\n".join([extract_text_from_file(file) for file in existing_files])
-        prompt = f"You are a helpful assistant. The following is the content of the uploaded files:\n\n{all_text}\n\nAnswer the following question:\n{user_input}"
+        prompt = f"You are a helpful assistant. Use the following context to answer the question:\n\n{context}\n\nQuestion:\n{user_input}"
+
+        # Log the prompt for debugging
+        st.write("Prompt being sent to the assistant:")
+        st.code(prompt)
 
         # Send the prompt to the Ollama server with streaming enabled
         url = "http://localhost:11434/api/generate"
@@ -165,17 +276,14 @@ def main():
                                     # Parse the incoming JSON line
                                     parsed_obj = json.loads(line.decode('utf-8'))
                                     response_chunk = parsed_obj.get("response", "")
-
                                     # Accumulate and display the response
                                     response_text += response_chunk
                                     message_placeholder.markdown(response_text)
-
                                 except json.JSONDecodeError as e:
                                     st.error(f"Failed to parse JSON part: {e}")
                                     st.write("Problematic JSON part:", line)
-
-                        # Update the chat history with the final response
-                        st.session_state.history.append({"role": "assistant", "content": response_text})
+                    # Update the chat history with the final response
+                    st.session_state.history.append({"role": "assistant", "content": response_text})
                 else:
                     st.error(f"Error communicating with Ollama server: {response.status_code}")
                     st.error(response.text)
