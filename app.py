@@ -91,15 +91,14 @@ def main():
             save_uploaded_file(uploaded_file)
         st.success("Files uploaded and saved successfully!")
 
-    # List files in data folder and process them
+    # Process all files in data folder
     existing_files = list(Path(DATA_FOLDER).glob("*"))
-    all_text = ""
     if existing_files:
         with st.expander("Extracted Content from Files"):
             for file in existing_files:
-                all_text += f"\n---\n**{file.name}:**\n"
-                all_text += extract_text_from_file(file)
-            st.text_area("Processed Text", all_text, height=300)
+                st.subheader(file.name)
+                extracted_text = extract_text_from_file(file)
+                st.text_area(f"Extracted Content from {file.name}", extracted_text, height=200)
 
     # Chat interface using Streamlit's chat elements
     if 'history' not in st.session_state:
@@ -120,6 +119,7 @@ def main():
         st.chat_message("user").markdown(user_input)
 
         # Prepare the prompt
+        all_text = "\n".join([extract_text_from_file(file) for file in existing_files])
         prompt = f"You are a helpful assistant. The following is the content of the uploaded files:\n\n{all_text}\n\nAnswer the following question:\n{user_input}"
 
         # Send the prompt to the Ollama server with streaming enabled
