@@ -6,3 +6,5 @@ markdown
 openpyxl
 qdrant-client
 sentence-transformers
+python-docx
+requests

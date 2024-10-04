@@ -1,5 +1,4 @@
 services:
-
   qdrant:
     image: qdrant/qdrant
     ports:
@@ -9,3 +8,16 @@ services:
     image: ollama/ollama:latest
     ports:
       - "11434:11434"
+
+  streamlit_app:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    depends_on:
+      - qdrant
+      - ollama
+    volumes:
+      - ./:/app  # Map the entire current directory to /app in the container
+    environment:
+      - PYTHONUNBUFFERED=1
