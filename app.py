@@ -8,14 +8,14 @@ import json
 from pathlib import Path
 import requests
 
-data_folder = "data"
+DATA_FOLDER = "data"
 
 # Create data folder if it doesn't exist
-if not os.path.exists(data_folder):
-    os.makedirs(data_folder)
+if not os.path.exists(DATA_FOLDER):
+    os.makedirs(DATA_FOLDER)
 
 # Supported file types and their extensions
-supported_file_types = {
+SUPPORTED_FILE_TYPES = {
     "PDF": ["pdf"],
     "Word": ["docx"],
     "Excel": ["xlsx"],
@@ -26,7 +26,7 @@ supported_file_types = {
 
 # Helper function to save uploaded file
 def save_uploaded_file(uploaded_file):
-    with open(os.path.join(data_folder, uploaded_file.name), "wb") as f:
+    with open(os.path.join(DATA_FOLDER, uploaded_file.name), "wb") as f:
         f.write(uploaded_file.getbuffer())
 
 # Helper function to extract text from various file types
@@ -66,53 +66,67 @@ def extract_text_from_file(file_path):
 def main():
     st.title("Multi-File Chat with Ollama")
 
+    # Fetch list of models from the server
+    model_url = "http://localhost:11434/v1/models"
+    try:
+        response = requests.get(model_url)
+        if response.status_code == 200:
+            models_data = response.json()
+            model_names = [model['id'] for model in models_data.get("data", [])]
+        else:
+            st.error(f"Error fetching models: {response.status_code}")
+            model_names = ["mistral"]
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error communicating with Ollama server: {e}")
+        model_names = ["mistral"]
+
+    # Model selector
+    selected_model = st.selectbox("Select a model to use", model_names)
+
     # File uploader
-    uploaded_files = st.file_uploader("Upload files", type=[ext for exts in supported_file_types.values() for ext in exts], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload files", type=[ext for exts in SUPPORTED_FILE_TYPES.values() for ext in exts], accept_multiple_files=True)
 
     if uploaded_files:
         for uploaded_file in uploaded_files:
             save_uploaded_file(uploaded_file)
         st.success("Files uploaded and saved successfully!")
 
-    # List files in data folder
-    existing_files = list(Path(data_folder).glob("*"))
+    # List files in data folder and process them
+    existing_files = list(Path(DATA_FOLDER).glob("*"))
+    all_text = ""
     if existing_files:
-        st.write("### Files in Data Folder")
-        files_to_delete = []
-        for file in existing_files:
-            col1, col2 = st.columns([3, 1])
-            with col1:
-                st.write(file.name)
-            with col2:
-                if st.button(f"Delete {file.name}", key=f"delete_{file.name}"):
-                    files_to_delete.append(file)
+        with st.expander("Extracted Content from Files"):
+            for file in existing_files:
+                all_text += f"\n---\n**{file.name}:**\n"
+                all_text += extract_text_from_file(file)
+            st.text_area("Processed Text", all_text, height=300)
 
-        # Delete selected files
-        for file in files_to_delete:
-            os.remove(file)
-            st.warning(f"Deleted {file.name}")
+    # Chat interface using Streamlit's chat elements
+    if 'history' not in st.session_state:
+        st.session_state.history = []
 
-    # Process all files in data folder
-    if existing_files:
-        st.write("### Extracted Content from Files")
-        all_text = ""
-        for file in existing_files:
-            all_text += f"\n---\n**{file.name}:**\n"
-            all_text += extract_text_from_file(file)
+    # Display chat history
+    for chat in st.session_state.history:
+        if chat['role'] == 'user':
+            st.chat_message("user").markdown(chat['content'])
+        elif chat['role'] == 'assistant':
+            st.chat_message("assistant").markdown(chat['content'])
 
-        st.text_area("Processed Text", all_text, height=300)
+    # User input for chat
+    user_input = st.chat_input("Ask a question about the files")
+    if user_input:
+        # Add user's question to history
+        st.session_state.history.append({"role": "user", "content": user_input})
+        st.chat_message("user").markdown(user_input)
 
-    # Chat interface
-    user_input = st.text_input("Ask a question about the files")
-    if st.button("Send") and user_input:
         # Prepare the prompt
         prompt = f"You are a helpful assistant. The following is the content of the uploaded files:\n\n{all_text}\n\nAnswer the following question:\n{user_input}"
 
         # Send the prompt to the Ollama server with streaming enabled
-        url = "http://localhost:11434/api/generate"
+        url = "http://localhost:11434/api/generate"  # Using the endpoint that worked with curl
         headers = {"Content-Type": "application/json"}
         data = {
-            "model": "mistral",  # Replace with your model name
+            "model": selected_model,  # Use the selected model
             "prompt": prompt
         }
 
@@ -133,29 +147,19 @@ def main():
 
                                 # Accumulate and display the response
                                 full_response += response_chunk
-                                response_placeholder.markdown(f"**Assistant (streaming):** {full_response}")  # Update with Markdown formatting
+                                response_placeholder.chat_message("assistant").markdown(full_response)  # Update with Markdown formatting
 
                             except json.JSONDecodeError as e:
                                 st.error(f"Failed to parse JSON part: {e}")
                                 st.write("Problematic JSON part:", line)
 
                     # Update the chat history with the final response
-                    if 'history' not in st.session_state:
-                        st.session_state.history = []
                     st.session_state.history.append({"role": "assistant", "content": full_response})
                 else:
                     st.error(f"Error communicating with Ollama server: {response.status_code}")
                     st.error(response.text)  # Print server error message to debug
         except requests.exceptions.RequestException as e:
             st.error(f"Error communicating with Ollama server: {e}")
-
-    # Display chat history
-    if 'history' in st.session_state:
-        for chat in st.session_state.history:
-            if chat['role'] == 'user':
-                st.write(f"**You:** {chat['content']}")
-            elif chat['role'] == 'assistant':
-                st.write(f"**Assistant:** {chat['content']}")
 
 if __name__ == "__main__":
     main()
