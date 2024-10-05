@@ -10536,3 +10536,2131 @@ Please note that the technology stack may evolve over time, but it is based on t
 2024-10-04 20:04:42,983 - INFO - Qdrant collection exists.
 2024-10-04 20:04:42,991 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
 2024-10-04 20:04:42,992 - INFO - Fetched models from Ollama server.
+2024-10-04 20:06:24,008 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:06:24,008 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:06:24,540 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:06:24,540 - INFO - Qdrant collection exists.
+2024-10-04 20:06:24,546 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:06:24,548 - INFO - Fetched models from Ollama server.
+2024-10-04 20:06:24,552 - INFO - Saved uploaded file: data/SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:24,579 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:24,579 - INFO - Created 7 chunks.
+2024-10-04 20:06:24,666 - INFO - Generated embeddings.
+2024-10-04 20:06:24,671 - INFO - HTTP Request: PUT http://qdrant:6333/collections/document_chunks/points?wait=true "HTTP/1.1 200 OK"
+2024-10-04 20:06:24,671 - INFO - Upserted 7 chunks to Qdrant.
+2024-10-04 20:06:24,672 - INFO - Uploaded and processed files.
+2024-10-04 20:06:24,699 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:44,289 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:06:44,289 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:06:44,929 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:06:44,929 - INFO - Qdrant collection exists.
+2024-10-04 20:06:44,934 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:06:44,935 - INFO - Fetched models from Ollama server.
+2024-10-04 20:06:44,940 - INFO - Saved uploaded file: data/SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:44,967 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:44,967 - INFO - Created 7 chunks.
+2024-10-04 20:06:45,052 - INFO - Generated embeddings.
+2024-10-04 20:06:45,059 - INFO - HTTP Request: PUT http://qdrant:6333/collections/document_chunks/points?wait=true "HTTP/1.1 200 OK"
+2024-10-04 20:06:45,060 - INFO - Upserted 7 chunks to Qdrant.
+2024-10-04 20:06:45,061 - INFO - Uploaded and processed files.
+2024-10-04 20:06:45,086 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:06:45,089 - INFO - User input: can you summarize the spartan technology?
+2024-10-04 20:06:45,101 - INFO - Generated query embedding.
+2024-10-04 20:06:45,103 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 20:06:45,104 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 20:06:48,247 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 20:06:49,878 - INFO - Assistant response: The SPARTAN technology appears to be a tool suite designed for the US Navy, focused on improving predictive maintenance and decision-making capabilities in aircraft maintenance and sustainment operations. The key features of the system include:
+
+1. Synthetic federation: Integrating multiple databases into a unified system to create a single source of truth (SSOT) for streamlined data management.
+2. Event-Based System (EBS): Facilitating real-time data updates and notifications to ensure all relevant systems and personnel have access to the most up-to-date information.
+3. Advanced Language Models (LLMs): Leveraging artificial intelligence technology to analyze data, make recommendations, and provide consensus-driven decisions.
+4. Predictive maintenance capabilities: Using machine learning and advanced analytics to predict potential issues and prevent downtime.
+
+The SPARTAN system appears to address current inefficiencies in the Navy's operational processes by providing a single, unified platform for managing aircraft databases and making informed decisions.
+2024-10-04 20:07:29,350 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:07:29,350 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:07:30,091 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:07:30,091 - INFO - Qdrant collection exists.
+2024-10-04 20:07:30,098 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:07:30,100 - INFO - Fetched models from Ollama server.
+2024-10-04 20:07:30,106 - INFO - Saved uploaded file: data/SPARTAN_Technology_Updated.docx
+2024-10-04 20:07:30,132 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:07:30,132 - INFO - Created 7 chunks.
+2024-10-04 20:07:30,226 - INFO - Generated embeddings.
+2024-10-04 20:07:30,232 - INFO - HTTP Request: PUT http://qdrant:6333/collections/document_chunks/points?wait=true "HTTP/1.1 200 OK"
+2024-10-04 20:07:30,233 - INFO - Upserted 7 chunks to Qdrant.
+2024-10-04 20:07:30,233 - INFO - Uploaded and processed files.
+2024-10-04 20:07:30,258 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:07:30,262 - INFO - User input: can you list is major components in a table and descbe each with a potential technology to support
+2024-10-04 20:07:30,276 - INFO - Generated query embedding.
+2024-10-04 20:07:30,279 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 20:07:30,279 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 20:07:30,502 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 20:07:35,562 - INFO - Assistant response: Here are the potential technologies for each component of the proposed system:
+
+**1. Synthetically Federated Database (SYFT)**
+
+| Technology | Description |
+| --- | --- |
+| MongoDB | Flexible NoSQL database, providing scalability, ease of use, and seamless integration capabilities. |
+| Apache Cassandra | High-performance NoSQL database, optimized for large-scale data integration and query performance. |
+
+**2. Event-Based System (EBS)**
+
+| Technology | Description |
+| --- | --- |
+| Apache Kafka | Distributed streaming platform, enabling real-time data synchronization and monitoring across databases. |
+| RabbitMQ | Message broker, providing reliable and scalable messaging infrastructure for integrating disparate systems. |
+| Prometheus | Open-source monitoring system, leveraging its powerful metrics framework to collect data from various sources. |
+
+**3. Predictive Maintenance Planning (PMP)**
+
+| Technology | Description |
+| --- | --- |
+| Python (with LLMs) | Programming language, chosen for flexibility and ease of development in this context. |
+| scikit-learn (Python LLM integration) | Machine learning library, providing efficient support for large datasets and prediction tasks. |
+| Google Cloud BigQuery (for data analysis) | Cloud-based Data Warehouse, offering high-performance analytics and scalable query capabilities. |
+
+**4. Unified Domain Knowledge Base (ULPB)**
+
+| Technology | Description |
+| --- | --- |
+| Wikidata (JavaScript-driven knowledge graph) | Collaborative, open-source knowledge base, supporting structured and semi-structured data integration. |
+| GraphDB (Java-based NoSQL database) | Schema-on-write NoSQL database, allowing flexible schema evolution and efficient data queries. |
+
+**5. Security Standards Compliance (SEC)**
+
+| Technology | Description |
+| --- | --- |
+| OWASP Secure Coding Practices Toolkit | Comprehensive security standards document collection, providing best practices for secure coding development. |
+| TLS 1.2 or later | Support encryption protocols like SSL/TLS with end-to-end symmetric keys to ensure confidentiality and integrity of data transmissions. |
+| Access Control Lists (ACLs) and Role-Based Access Security (RBAS). | Secure roles-based access control mechanisms, granting access to sensitive areas of the system based on user identities.
+
+**6. Integration Platform (IP)**
+
+| Technology | Description |
+| --- | --- |
+| OpenStack Swift | Object storage platform, providing seamless data integration across various sources, using standardized protocols like AMQP/SQOP or Apache ZooKeeper/EPDF. |
+
+Additional technologies that could be considered are:
+
+* Cloud-based Infrastructure: AWS IAM, Google Cloud API Management
+* Cybersecurity: AWS VPC, Google Cloud Network Services (Virtual Functions), cloud-arc security architecture
+
+The recommended technologies for each component will depend on the specific requirements and context of your Navy maintenance planning system. I am assuming that these components have some or all LLM support capabilities, please let me know if you would like more guidance on that topic!
+2024-10-04 20:08:21,465 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:08:21,465 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:08:22,014 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:08:22,015 - INFO - Qdrant collection exists.
+2024-10-04 20:08:22,021 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:08:22,024 - INFO - Fetched models from Ollama server.
+2024-10-04 20:08:22,030 - INFO - Saved uploaded file: data/SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:22,056 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:22,056 - INFO - Created 7 chunks.
+2024-10-04 20:08:22,153 - INFO - Generated embeddings.
+2024-10-04 20:08:22,158 - INFO - HTTP Request: PUT http://qdrant:6333/collections/document_chunks/points?wait=true "HTTP/1.1 200 OK"
+2024-10-04 20:08:22,158 - INFO - Upserted 7 chunks to Qdrant.
+2024-10-04 20:08:22,159 - INFO - Uploaded and processed files.
+2024-10-04 20:08:22,183 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:22,190 - INFO - Started downloading model 'qwen2.5:0.5b'.
+2024-10-04 20:08:22,191 - INFO - Download status: pulling manifest
+2024-10-04 20:08:22,480 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:08:22,480 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:08:23,081 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:08:23,081 - INFO - Qdrant collection exists.
+2024-10-04 20:08:23,086 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:08:23,089 - INFO - Fetched models from Ollama server.
+2024-10-04 20:08:23,094 - INFO - Saved uploaded file: data/SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:23,120 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:23,121 - INFO - Created 7 chunks.
+2024-10-04 20:08:23,216 - INFO - Generated embeddings.
+2024-10-04 20:08:23,221 - INFO - HTTP Request: PUT http://qdrant:6333/collections/document_chunks/points?wait=true "HTTP/1.1 200 OK"
+2024-10-04 20:08:23,221 - INFO - Upserted 7 chunks to Qdrant.
+2024-10-04 20:08:23,222 - INFO - Uploaded and processed files.
+2024-10-04 20:08:23,247 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:08:23,253 - INFO - Started downloading model 'qwen2.5:0.5b'.
+2024-10-04 20:08:23,254 - INFO - Download status: pulling manifest
+2024-10-04 20:08:23,663 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:23,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:23,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:23,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:23,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:23,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:24,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,518 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:25,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,356 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:26,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,198 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,258 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,438 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:27,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:28,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,778 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:29,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,676 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,736 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:30,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,096 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,216 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,276 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,336 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:31,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,358 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,416 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:32,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,258 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,498 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,678 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,738 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:33,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,336 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,516 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,818 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,876 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,936 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:34,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,478 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:35,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,138 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,318 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:36,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,158 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,336 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:37,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:38,956 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,618 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,736 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:39,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,516 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,638 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,756 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,936 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:40,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:41,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,078 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,556 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,618 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:42,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,276 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,336 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,458 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,518 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:43,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,178 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:44,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,076 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:45,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,038 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,096 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,458 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,696 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,756 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:46,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,776 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,836 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:47,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,318 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,798 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:48,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,398 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,936 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:49,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,836 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:50,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:51,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,638 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,938 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:52,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,056 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,478 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:53,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,076 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,138 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,616 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,916 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:54,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,158 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,516 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,818 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,876 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:55,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,418 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,658 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:56,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,076 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,136 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,198 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,318 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:57,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,336 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,938 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:58,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,418 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,658 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:08:59,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,436 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,499 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,736 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,916 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:00,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,096 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,396 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:01,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,236 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:02,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,556 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,865 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:03,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,398 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,758 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,878 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:04,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:05,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,258 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,556 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:06,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,098 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,456 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,578 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,638 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,758 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:07,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,176 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,416 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,658 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,716 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:08,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,258 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,436 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,616 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,678 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:09,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,218 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,878 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:10,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:11,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,078 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,258 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,558 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:12,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,098 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,578 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,756 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:13,998 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,238 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,716 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,836 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:14,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,016 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:15,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,218 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:16,998 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,298 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,658 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,776 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:17,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,198 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,438 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,798 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:18,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,276 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,938 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:19,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,476 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:20,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,376 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,618 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,678 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:21,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,036 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:22,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,236 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,358 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,476 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:23,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,198 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,376 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,798 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:24,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,285 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,816 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:25,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:26,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,798 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:27,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:28,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,536 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:29,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,136 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:30,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,456 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,696 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,818 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,876 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:31,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,238 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,298 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,358 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,418 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,718 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,838 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:32,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,078 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,318 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,616 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:33,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:34,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,478 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:35,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,318 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,558 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:36,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,878 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:37,998 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,358 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,598 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,658 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,778 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:38,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,198 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,796 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:39,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:40,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,298 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:41,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,438 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,798 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:42,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,578 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,876 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:43,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:44,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,438 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,558 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:45,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,456 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,516 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,636 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,696 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,756 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,876 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,936 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:46,996 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,056 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,116 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,176 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,236 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,356 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,896 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:47,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,078 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,376 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,438 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:48,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,578 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,818 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,936 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:49,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,238 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,478 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,718 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,897 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:50,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,016 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,136 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,316 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,376 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,616 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,856 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,918 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:51,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,697 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,937 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:52,998 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,057 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,118 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,236 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,417 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,538 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,778 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,896 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:53,958 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,018 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,378 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,497 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,678 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,797 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,857 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:54,977 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,098 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,157 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,278 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,337 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,637 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,698 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,757 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,817 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,877 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,938 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:55,997 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,058 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,117 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,177 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,237 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,297 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,357 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,418 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,477 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,537 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,597 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,657 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,717 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,777 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,837 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,898 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:56,957 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,017 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,077 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,137 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,197 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,257 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,317 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,377 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,437 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,498 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,557 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,617 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,677 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,737 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,796 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,858 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,917 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:57,978 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,037 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,097 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,156 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,217 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,277 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,338 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,397 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,457 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,517 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:58,577 - INFO - Download status: pulling c5396e06af29
+2024-10-04 20:09:59,508 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,568 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,627 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,688 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,748 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,808 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,868 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,928 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:09:59,988 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,048 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,108 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,168 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,228 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,287 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,348 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,408 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:00,468 - INFO - Download status: pulling 66b9ea09bd5b
+2024-10-04 20:10:01,355 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,414 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,475 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,535 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,595 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,654 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,715 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,775 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,834 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,894 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:01,955 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,014 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,075 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,135 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,195 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,255 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:02,315 - INFO - Download status: pulling eb4402837c78
+2024-10-04 20:10:03,314 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,373 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,433 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,494 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,554 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,614 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,674 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,734 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,793 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,853 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,914 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:03,974 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:04,033 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:04,094 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:04,154 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:04,214 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:04,273 - INFO - Download status: pulling 832dd9e00a68
+2024-10-04 20:10:05,046 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,106 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,166 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,225 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,285 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,346 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,406 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,466 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,527 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,586 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,646 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,706 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,767 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,825 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,886 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:05,945 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:06,006 - INFO - Download status: pulling 005f95c74751
+2024-10-04 20:10:06,027 - INFO - Download status: verifying sha256 digest
+2024-10-04 20:10:06,923 - INFO - Download status: writing manifest
+2024-10-04 20:10:06,925 - INFO - Download status: success
+2024-10-04 20:10:06,927 - INFO - Model 'qwen2.5:0.5b' downloaded successfully!
+2024-10-04 20:10:11,631 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:10:11,631 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:10:12,165 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:10:12,166 - INFO - Qdrant collection exists.
+2024-10-04 20:10:12,174 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:10:12,177 - INFO - Fetched models from Ollama server.
+2024-10-04 20:10:12,212 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:24:08,226 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:24:08,227 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:24:09,276 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:24:09,277 - INFO - Qdrant collection exists.
+2024-10-04 20:24:09,281 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:24:09,282 - INFO - Fetched models from Ollama server.
+2024-10-04 20:24:09,312 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:24:21,538 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:24:21,538 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:24:22,062 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:24:22,063 - INFO - Qdrant collection exists.
+2024-10-04 20:24:22,071 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:24:22,072 - INFO - Fetched models from Ollama server.
+2024-10-04 20:24:22,107 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:24:22,110 - INFO - User input: tell me about the spartan techology
+2024-10-04 20:24:22,126 - INFO - Generated query embedding.
+2024-10-04 20:24:22,129 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 20:24:22,129 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 20:24:24,896 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 20:24:25,440 - INFO - Assistant response: The Spartans technology suite integrates cutting-edge AI and machine learning tools for efficient analysis of naval data, adhering to stringent ethical standards. This approach aims at ensuring SPARTAN remains effective, secure, and aligned with Navy's operational goals. The system continuously evaluates its effectiveness against operational requirements, aiming to improve the ability to analyze maritime data effectively while respecting privacy and security practices such as GDPR compliance.
+2024-10-04 20:24:35,645 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:24:35,645 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:24:36,196 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:24:36,196 - INFO - Qdrant collection exists.
+2024-10-04 20:24:36,203 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:24:36,204 - INFO - Fetched models from Ollama server.
+2024-10-04 20:24:36,237 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:24:36,241 - INFO - User input: can you list its major componenets
+2024-10-04 20:24:36,256 - INFO - Generated query embedding.
+2024-10-04 20:24:36,260 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 20:24:36,261 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 20:24:36,584 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 20:24:38,152 - INFO - Assistant response: Certainly! According to the provided context, there are several key components that make up the `synthetic federation` feature mentioned in this proposal:
+
+1. **Synthetic Federation**: This refers to the idea of integrating multiple databases and systems into a unified infrastructure.
+2. **Integrators/Suppliers**: Major software providers or service providers who can maintain, upgrade, manage, and integrate different types of databases and applications.
+3. **Data Integrator**: A central component that performs data merging tasks such as merging data from different sources, eliminating duplicates in the data, and applying some type of normalization/adjustment to ensure consistency across all integrated components.
+
+Additionally:
+
+- **Governments** can act like `suppliers` for these databases and systems.
+- **Users/Governors**: Directly interact with `Suppliers`.
+
+The proposal outlines a way to create an environment where the integration of various services is made easier by standardizing common functions, making it possible to add new functionalities or updates more effectively. It suggests that a central hub would manage some of the operations for users and systems while other services are maintained independently, hence leveraging automation, optimization, and unified data representation across all major components.
+2024-10-04 20:25:09,442 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:25:09,442 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:25:10,041 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:25:10,042 - INFO - Qdrant collection exists.
+2024-10-04 20:25:10,049 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:25:10,051 - INFO - Fetched models from Ollama server.
+2024-10-04 20:25:10,085 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:25:10,090 - INFO - User input: can you put these components, their descriptions, and potential supporting techologies into a table
+2024-10-04 20:25:10,109 - INFO - Generated query embedding.
+2024-10-04 20:25:10,112 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 20:25:10,112 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 20:25:10,321 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 20:25:13,433 - INFO - Assistant response: To put the components, descriptions, and supporting technologies into a table:
+
+```markdown
+## Table: ComponentDescription
+| Property         | Detail                                                      |
+|-------------------|------------------------------------------------------------|
+| **Purpose**      | Creating unified data environment for maintenance operations.    |
+| **Technology**   | **LLM Council**, **Odd Numbered Configuration System** (ODS)  |
+
+### LLM Council
+#### Description:
+A council of language models, which helps analyze and classify diverse patterns.
+- **Description**: **LLMs** are artificial intelligence agents that can analyze text data in complex domains like military data. They provide detailed insights into possible maintenance issues, helping to predict potential problems effectively.
+
+#### Support technologies:
+- **JSON-LD Encoder/Decoder (LLMEncoder/LLMDecoder)**: A library or service that converts structured language data into a format LLMs understand.
+- **ODS Support**: An odd-numbered configuration system for the LLM Council's workstream, promoting consistency and coherence in its analysis of data.
+
+### Odd Numbered Configuration System
+#### Description:
+A system configured with multiple independent LLMs to aggregate knowledge on diverse topics. This facilitates a broader view and collaboration among different models.
+- **Description**: **ODS** is an algorithm used in distributed systems to coordinate the work stream, ensuring that all LLMs have access to an adequate workload.
+
+#### Support technologies:
+- **ML Framework (LLMEncoder/LLMDecoder)**: Similar to LLMs, ML frameworks enable automated inference and generation of patterns.
+- **Concurrency Management**: Strategies for managing multiple workloads while maintaining data integrity. For example, using asynchronous processing to reduce load on the central authority.
+
+### System Overview
+- **LLMModerating (LLMModerator)**
+  - Task: Analyze and process data from the LLMs.
+  - Tools:
+    - JSON-LD Encoder/Decoder
+    - ODS Support
+
+- **MLTrainingCoordinator**  
+  - Task: Train models with structured and unlabeled input data. This enables a more informed predictive analysis of patterns.
+
+### Key Considerations for Integration
+While no single tool will solve all the components (e.g., none of these systems offer real-time updates as described in SPARTAN's mission), their collective strengths can be leveraged to achieve consistent and coordinated maintenance operations.
+```
+
+This table provides a structured overview with descriptions, support technologies, and potential applications for each component.
+2024-10-04 20:25:29,370 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:25:29,370 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:25:29,889 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:25:29,889 - INFO - Qdrant collection exists.
+2024-10-04 20:25:29,897 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:25:29,898 - INFO - Fetched models from Ollama server.
+2024-10-04 20:25:29,932 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:30:09,291 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:30:09,291 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:30:31,312 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:30:31,322 - INFO - Qdrant collection exists.
+2024-10-04 20:30:31,335 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:30:31,339 - INFO - Fetched models from Ollama server.
+2024-10-04 20:30:31,377 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 20:49:33,480 - INFO - Use pytorch device_name: cpu
+2024-10-04 20:49:33,481 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 20:49:54,748 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 20:49:54,757 - INFO - Qdrant collection exists.
+2024-10-04 20:49:54,771 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 20:49:54,775 - INFO - Fetched models from Ollama server.
+2024-10-04 20:49:54,813 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 21:56:34,694 - INFO - Use pytorch device_name: cpu
+2024-10-04 21:56:34,694 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 21:56:55,542 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 21:56:55,550 - INFO - Qdrant collection exists.
+2024-10-04 21:56:55,564 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 21:56:55,568 - INFO - Fetched models from Ollama server.
+2024-10-04 21:56:55,609 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 22:43:40,012 - INFO - Use pytorch device_name: cpu
+2024-10-04 22:43:40,012 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 22:43:40,604 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 22:43:40,605 - INFO - Qdrant collection exists.
+2024-10-04 22:43:40,613 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 22:43:40,614 - INFO - Fetched models from Ollama server.
+2024-10-04 22:43:40,658 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:02:11,803 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:02:11,803 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:02:12,453 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:02:12,454 - INFO - Qdrant collection exists.
+2024-10-04 23:02:12,460 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:02:12,462 - INFO - Fetched models from Ollama server.
+2024-10-04 23:02:12,495 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:22:49,740 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:22:49,740 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:22:50,337 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:22:50,338 - INFO - Qdrant collection exists.
+2024-10-04 23:22:50,346 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:22:50,349 - INFO - Fetched models from Ollama server.
+2024-10-04 23:22:50,385 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:29:54,099 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:29:54,099 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:29:54,741 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:29:54,741 - INFO - Qdrant collection exists.
+2024-10-04 23:29:54,750 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:29:54,753 - INFO - Fetched models from Ollama server.
+2024-10-04 23:29:54,786 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:30:08,058 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:30:08,058 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:30:08,676 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:30:08,677 - INFO - Qdrant collection exists.
+2024-10-04 23:30:08,685 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:30:08,688 - INFO - Fetched models from Ollama server.
+2024-10-04 23:30:08,721 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:30:08,724 - INFO - User input: summarize the spartan technology please
+2024-10-04 23:30:08,748 - INFO - Generated query embedding.
+2024-10-04 23:30:08,750 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 23:30:08,752 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 23:30:11,476 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 23:30:12,872 - INFO - Assistant response:  Spartan is a tool suite that integrates advanced technologies and adheres to ethical standards for collaborative development. It aims to continuously evaluate and improve its effectiveness, security, and alignment with the Navy's operational goals. This ongoing process is focused on meeting the needs of the Department of Defense (DoD) and ensuring effective and secure data sharing. 
+2024-10-04 23:30:32,938 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:30:32,938 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:30:33,604 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:30:33,605 - INFO - Qdrant collection exists.
+2024-10-04 23:30:33,612 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:30:33,615 - INFO - Fetched models from Ollama server.
+2024-10-04 23:30:33,648 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-04 23:30:33,652 - INFO - User input: can you list the major components of the spartan tech in a table?
+2024-10-04 23:30:33,670 - INFO - Generated query embedding.
+2024-10-04 23:30:33,673 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-04 23:30:33,673 - INFO - Retrieved 5 relevant chunks.
+2024-10-04 23:30:33,773 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-04 23:30:42,325 - INFO - Assistant response:  Certainly! To answer your question, I need to clarify a few things. As I see it, the SPARTAN tool suite is not an entity with fixed, tangible "components." Instead, it is an effort focused on integrating advanced technologies such as machine learning and cybersecurity solutions into Navy operations. Given this context, it seems more appropriate to describe the major components of SPARTAN in a conceptual rather than physical sense.
+
+Here are some of the key aspects and functionalities that are crucial to the overarching goal of the SPARTAN tool suite project:
+
+| Component Name | Description | Benefits to Navy Operations |
+| --- | --- | --- |
+| Machine Learning (ML) | Incorporates artificial intelligence to analyze vast amounts of data and provide insights. It can assist in tasks such as detecting patterns, forecasting outcomes, or identifying security threats. | Improved decision-making, enhanced situational awareness, accelerated workflow. |
+| Cybersecurity Solutions | Implement various technologies (e.g., encryption, authentication) and processes to protect critical systems from cyber attacks or data breaches. This includes monitoring networks for unauthorized access and securing communication channels. | Ensures naval operational security, safeguards sensitive information, and maintains the integrity of naval systems. |
+| Human-Computer Interaction (HCI) Technologies | Design user interfaces that are intuitive, efficient, and integrated into daily tasks, so that users can perform their jobs more effectively. This involves understanding how humans interact with technology and optimizing the interface accordingly. | Increased accuracy, ease of use, and overall efficiency in naval operations. |
+| Ethical Guidelines and Protocols | Ensure that the SPARTAN tool suite adheres to ethical standards and is used responsibly by following ethical guidelines and protocols. This includes maintaining privacy, avoiding bias or discrimination, and respecting human rights. | Establishes trust in the system, promotes its responsible use, and fosters a culture of integrity. |
+
+Please note that this list represents a high-level overview. Each category can be further broken down into specific technologies or applications tailored to the Navy's needs. 
+2024-10-04 23:58:12,717 - INFO - Use pytorch device_name: cpu
+2024-10-04 23:58:12,718 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-04 23:58:13,349 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-04 23:58:13,350 - INFO - Qdrant collection exists.
+2024-10-04 23:58:13,357 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-04 23:58:13,359 - INFO - Fetched models from Ollama server.
+2024-10-04 23:58:13,393 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:03:09,953 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:03:09,954 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:03:10,588 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:03:10,589 - INFO - Qdrant collection exists.
+2024-10-05 00:03:10,597 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:03:10,599 - INFO - Fetched models from Ollama server.
+2024-10-05 00:03:10,635 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:08:18,123 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:08:18,123 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:08:39,974 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:08:39,988 - INFO - Qdrant collection exists.
+2024-10-05 00:08:40,004 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:08:40,009 - INFO - Fetched models from Ollama server.
+2024-10-05 00:08:40,045 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:08:46,160 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:08:46,160 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:08:46,859 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:08:46,860 - INFO - Qdrant collection exists.
+2024-10-05 00:08:46,868 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:08:46,871 - INFO - Fetched models from Ollama server.
+2024-10-05 00:08:46,910 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:09:03,764 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:09:03,765 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:09:04,450 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:09:04,451 - INFO - Qdrant collection exists.
+2024-10-05 00:09:04,460 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:09:04,464 - INFO - Fetched models from Ollama server.
+2024-10-05 00:09:04,496 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:09:04,499 - INFO - User input: summarize spartan for me
+2024-10-05 00:09:04,520 - INFO - Generated query embedding.
+2024-10-05 00:09:04,524 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-05 00:09:04,526 - INFO - Retrieved 5 relevant chunks.
+2024-10-05 00:09:07,586 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-05 00:09:07,964 - INFO - Assistant response: Spartan refers to a collaborative tool suite that integrates advanced technologies under strict ethical standards, focusing on ongoing development and evaluation to ensure its effectiveness, security, and alignment with the Navy's operational goals.
+2024-10-05 00:09:17,054 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:09:17,055 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:09:17,725 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:09:17,726 - INFO - Qdrant collection exists.
+2024-10-05 00:09:17,733 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:09:17,736 - INFO - Fetched models from Ollama server.
+2024-10-05 00:09:17,772 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:09:17,776 - INFO - User input: what are its main components?
+2024-10-05 00:09:17,792 - INFO - Generated query embedding.
+2024-10-05 00:09:17,796 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-05 00:09:17,796 - INFO - Retrieved 5 relevant chunks.
+2024-10-05 00:09:18,197 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-05 00:09:19,147 - INFO - Assistant response: The main components of the proposal include:
+
+1. Synthetic Federation
+2. Event-Based System (EBS)
+3. Large Language Models (LLMs)
+4. Synthetic Source of Truth (SSOT)
+5. Integrated Domain Knowledge Base
+6. Operational Protocols for Integration and Testing
+7. Secure interaction mechanisms to protect classified data in air-gapped environments
+
+These components are designed to work together to create a comprehensive solution for enhancing predictive maintenance capabilities, ensuring operational efficiency, and modernizing maintenance operations within the Navy.
+2024-10-05 00:09:37,951 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:09:37,951 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:09:38,562 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:09:38,563 - INFO - Qdrant collection exists.
+2024-10-05 00:09:38,571 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:09:38,575 - INFO - Fetched models from Ollama server.
+2024-10-05 00:09:38,607 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:09:38,612 - INFO - User input: can you put these into a descriptive table?
+2024-10-05 00:09:38,635 - INFO - Generated query embedding.
+2024-10-05 00:09:38,638 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-05 00:09:38,639 - INFO - Retrieved 5 relevant chunks.
+2024-10-05 00:09:39,004 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-05 00:09:40,980 - INFO - Assistant response: Here is a descriptive table summarizing the key features and objectives of the proposed solution:
+
+| **Feature** | **Description** |
+| --- | --- |
+| Objective | Create a unified data environment for aircraft maintenance and sustainment through synthetic federation of disparate Navy databases. Enhance predictive maintenance capabilities, bridge gaps in data management, and support mission readiness. |
+| Synthetic Federation | Integrates multiple disparate databases into a single, unified system, creating a single source of truth (SSOT) for streamlined data management. |
+| Event-Based System (EBS) | Facilitates real-time data updates and notifications to ensure all relevant systems and personnel have the most current information. |
+| Advanced Language Model Agent (LLM) Components |
+| Individual LLMs | Analyze events and data, providing recommendations based on their analysis, using an odd-numbered configuration for evaluation results. |
+| Objectives Alignment with Strategic Goals | Supports Navy's digital transformation and readiness initiatives, such as Get Real and Get Better. |
+| Comprehensive Offline Tool Suite | Designed to modernize maintenance operations by simplifying database management and improving decision-making processes.
+2024-10-05 00:09:58,696 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:09:58,696 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:09:59,283 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:09:59,283 - INFO - Qdrant collection exists.
+2024-10-05 00:09:59,291 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:09:59,294 - INFO - Fetched models from Ollama server.
+2024-10-05 00:09:59,328 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-05 00:09:59,334 - INFO - User input: add a column for potential techologies
+2024-10-05 00:09:59,351 - INFO - Generated query embedding.
+2024-10-05 00:09:59,354 - INFO - HTTP Request: POST http://qdrant:6333/collections/document_chunks/points/search "HTTP/1.1 200 OK"
+2024-10-05 00:09:59,354 - INFO - Retrieved 5 relevant chunks.
+2024-10-05 00:09:59,720 - INFO - HTTP Request: POST http://ollama:11434/v1/completions "HTTP/1.1 200 OK"
+2024-10-05 00:10:03,688 - INFO - Assistant response: To implement a feature that adds a column for potential technologies to the existing database, the following steps could be taken:
+
+1. **Data Integration**: The database would need to be integrated with a technology database or service that can provide information on various technologies.
+2. **Data Mapping**: The integration process would require defining data mappings between the existing database and the new technology database. This would identify which fields in the original database match with their corresponding fields in the new database.
+3. **Populating the New Database**: Once the data mappings are defined, data from both databases would be populated into a new table or merged into an existing table. The new column for potential technologies could then be added to this table.
+4. **Data Validation and Cleanliness**: The integration process should also involve regular data cleaning and validation measures to ensure accuracy and consistency.
+
+To implement the feature in a practical way, here's a possible step-by-step approach:
+
+* Conduct an inventory analysis to identify existing databases related to aircraft maintenance (e.g., maintenance records, technical specifications).
+* Identify potential technologies (e.g., engine types, propulsion systems, advanced materials) that could be relevant for flight operations.
+* Research and collect relevant data from the public domain, online resources, or through partnerships with technology providers.
+* Use a mapping algorithm (e.g., entity-relationship modeling, data warehousing) to match corresponding fields between the aircraft maintenance databases and the potential technologies database.
+
+Once the integration is set up, you could implement a workflow that:
+
+1. Asks users for information on their current aircraft model or technology needs.
+2. Retrieves this information from either an external database or one generated internally using data analytics techniques.
+3. Matches the retrieved information with pre-defined potential technologies based on the aircraft maintenance databases.
+4. Adds a new column to the database entry table for the requested technology.
+5. Sends confirmation back to users, along with relevant technical documentation and resources.
+
+Throughout this process, it's essential to ensure that the integration is accurately mapped and data cleaning processes are in place to prevent inconsistencies or inaccuracies.
+
+As the synthetic federation evolves into a comprehensive solution offering streamlined workflows and optimized decision-making capabilities for military aviation organizations, incorporating advanced features like predictive analytics on technologies could serve as an added layer of intelligence, potentially improving operational reliability.
+2024-10-05 00:23:37,012 - INFO - Use pytorch device_name: cpu
+2024-10-05 00:23:37,013 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-05 00:23:37,634 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-05 00:23:37,635 - INFO - Qdrant collection exists.
+2024-10-05 00:23:37,643 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-05 00:23:37,644 - INFO - Fetched models from Ollama server.
+2024-10-05 00:23:37,681 - INFO - Extracted text from SPARTAN_Technology_Updated.docx

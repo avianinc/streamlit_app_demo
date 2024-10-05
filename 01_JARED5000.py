@@ -13,6 +13,7 @@ from sentence_transformers import SentenceTransformer
 import uuid
 import logging
 import json
+from utilities.icon import page_icon
 
 # Initialize Streamlit
 st.set_page_config(

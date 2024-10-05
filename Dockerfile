@@ -30,4 +30,4 @@ COPY . /app/
 EXPOSE 8501
 
 # Command to run the app with live reloading
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.runOnSave=true"]
+CMD ["streamlit", "run", "01_JARED5000.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.runOnSave=true"]
