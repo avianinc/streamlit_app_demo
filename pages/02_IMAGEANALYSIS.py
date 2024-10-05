@@ -6,10 +6,12 @@ from io import BytesIO
 import json
 import logging
 
+ALLOWED_MODELS= ["bakllava:latest", "llava:latest","llava:34b"]
+
 # Initialize Streamlit
 st.set_page_config(
     page_title="Sandbox",
-    page_icon="🌋",
+    page_icon="📷",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -27,7 +29,7 @@ def img_to_base64(image):
     return base64.b64encode(buffered.getvalue()).decode()
 
 def get_allowed_model_names(models_info):
-    allowed_models = ["bakllava:latest", "llava:latest"]
+    allowed_models = ALLOWED_MODELS
     return tuple(
         model
         for model in allowed_models
@@ -77,18 +79,18 @@ def main():
     try:
         models_info = requests.get("http://ollama:11434/v1/models").json()
         available_models = get_allowed_model_names(models_info)
-        missing_models = set(["bakllava:latest", "llava:latest"]) - set(available_models)
+        missing_models = set(ALLOWED_MODELS) - set(available_models)
     except Exception as e:
         st.error(f"Error fetching models: {str(e)}")
         available_models = []
-        missing_models = set(["bakllava:latest", "llava:latest"])
+        missing_models = set(ALLOWED_MODELS)
 
     col_1, col_2 = st.columns(2)
     with col_1:
         if not available_models:
             st.error("No allowed models are available.")
             model_to_download = st.selectbox(
-                "Select a model to download", ["bakllava:latest", "llava:latest"]
+                "Select a model to download", ALLOWED_MODELS
             )
             if st.button(f"Download {model_to_download}"):
                 download_model_with_progress(model_to_download)

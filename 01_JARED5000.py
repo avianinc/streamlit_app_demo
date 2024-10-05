@@ -18,7 +18,7 @@ from utilities.icon import page_icon
 # Initialize Streamlit
 st.set_page_config(
     page_title="JS5000",
-    page_icon="💬",
+    page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",
 )
