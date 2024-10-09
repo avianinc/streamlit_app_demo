@@ -12833,3 +12833,31 @@ By following this plan, you'll be well on your way to building a cutting-edge tr
 2024-10-05 14:02:02,201 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
 2024-10-05 14:02:02,203 - INFO - Fetched models from Ollama server.
 2024-10-05 14:02:02,242 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-08 23:29:14,372 - INFO - Use pytorch device_name: cpu
+2024-10-08 23:29:14,373 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-08 23:29:15,157 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-08 23:29:15,165 - INFO - Qdrant collection exists.
+2024-10-08 23:29:15,181 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-08 23:29:15,184 - INFO - Fetched models from Ollama server.
+2024-10-08 23:29:15,223 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-08 23:35:16,053 - INFO - Use pytorch device_name: cpu
+2024-10-08 23:35:16,053 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-08 23:35:16,935 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-08 23:35:16,945 - INFO - Qdrant collection exists.
+2024-10-08 23:35:16,960 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-08 23:35:16,966 - INFO - Fetched models from Ollama server.
+2024-10-08 23:35:17,003 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-08 23:58:28,721 - INFO - Use pytorch device_name: cpu
+2024-10-08 23:58:28,721 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-08 23:58:50,558 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-08 23:58:50,571 - INFO - Qdrant collection exists.
+2024-10-08 23:58:50,587 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-08 23:58:50,595 - INFO - Fetched models from Ollama server.
+2024-10-08 23:58:50,633 - INFO - Extracted text from SPARTAN_Technology_Updated.docx
+2024-10-09 01:34:07,048 - INFO - Use pytorch device_name: cpu
+2024-10-09 01:34:07,051 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-09 01:34:27,904 - INFO - HTTP Request: GET http://qdrant:6333/collections/document_chunks "HTTP/1.1 200 OK"
+2024-10-09 01:34:27,912 - INFO - Qdrant collection exists.
+2024-10-09 01:34:27,927 - INFO - HTTP Request: GET http://ollama:11434/v1/models "HTTP/1.1 200 OK"
+2024-10-09 01:34:27,934 - INFO - Fetched models from Ollama server.
+2024-10-09 01:34:27,973 - INFO - Extracted text from SPARTAN_Technology_Updated.docx

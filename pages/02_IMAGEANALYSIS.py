@@ -5,13 +5,12 @@ from PIL import Image
 from io import BytesIO
 import json
 import logging
-
-ALLOWED_MODELS= ["bakllava:latest", "llava:latest","llava:34b"]
+import pytesseract
 
 # Initialize Streamlit
 st.set_page_config(
     page_title="Sandbox",
-    page_icon="📷",
+    page_icon="🌋",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -29,7 +28,7 @@ def img_to_base64(image):
     return base64.b64encode(buffered.getvalue()).decode()
 
 def get_allowed_model_names(models_info):
-    allowed_models = ALLOWED_MODELS
+    allowed_models = ["bakllava:latest", "llava:latest"]
     return tuple(
         model
         for model in allowed_models
@@ -72,6 +71,15 @@ def download_model_with_progress(model_name):
     except Exception as e:
         st.error(f"Error during model download: {str(e)}")
 
+# Function to perform OCR on the uploaded image
+def extract_text_from_image(image):
+    try:
+        text = pytesseract.image_to_string(image)
+        return text
+    except Exception as e:
+        st.error(f"Failed to extract text from image: {str(e)}")
+        return ""
+
 def main():
     st.subheader("Image Analysis Sandbox", anchor=False)
 
@@ -79,18 +87,18 @@ def main():
     try:
         models_info = requests.get("http://ollama:11434/v1/models").json()
         available_models = get_allowed_model_names(models_info)
-        missing_models = set(ALLOWED_MODELS) - set(available_models)
+        missing_models = set(["bakllava:latest", "llava:latest"]) - set(available_models)
     except Exception as e:
         st.error(f"Error fetching models: {str(e)}")
         available_models = []
-        missing_models = set(ALLOWED_MODELS)
+        missing_models = set(["bakllava:latest", "llava:latest"])
 
     col_1, col_2 = st.columns(2)
     with col_1:
         if not available_models:
             st.error("No allowed models are available.")
             model_to_download = st.selectbox(
-                "Select a model to download", ALLOWED_MODELS
+                "Select a model to download", ["bakllava:latest", "llava:latest"]
             )
             if st.button(f"Download {model_to_download}"):
                 download_model_with_progress(model_to_download)
@@ -118,7 +126,7 @@ def main():
 
     if "chats" not in st.session_state:
         st.session_state.chats = []
-    
+
     # To avoid the repeated responses issue, add a flag to track if the request is processing
     if "response_processed" not in st.session_state:
         st.session_state.response_processed = False
@@ -130,6 +138,15 @@ def main():
         if uploaded_file:
             image = Image.open(uploaded_file)
             st.image(image, caption="Uploaded image", use_column_width=True)
+
+            # Perform OCR on the uploaded image
+            ocr_text = extract_text_from_image(image)
+            if ocr_text:
+                st.markdown("### Extracted Text (OCR):")
+                st.write(ocr_text)
+                st.session_state.ocr_text = ocr_text  # Store OCR result in session state for later use
+            else:
+                st.write("No text detected in the image.")
 
     with col1:
         if uploaded_file:
@@ -143,6 +160,8 @@ def main():
             submit = st.button("Submit")
 
             if submit and user_input and not st.session_state.response_processed:
+                # Include OCR text as context for the user's question
+                context = f"OCR Extracted Text: {st.session_state.get('ocr_text', '')}\n\nQuestion: {user_input}"
                 st.session_state.chats.append({"role": "user", "content": user_input})
                 
                 image_base64 = img_to_base64(image)
@@ -153,7 +172,7 @@ def main():
                 }
                 data = {
                     "model": selected_model,
-                    "prompt": user_input,
+                    "prompt": context,  # Send OCR text along with the user question as context
                     "images": [image_base64],
                 }
 
@@ -178,7 +197,7 @@ def main():
                 # Update chat with the assistant's response
                 st.session_state.chats[-1]["content"] = response_text
                 st.session_state.response_processed = True  # Mark response as processed
-                st.rerun()  # Force rerun to display the response
+                st.experimental_rerun()  # Force rerun to display the response
 
     if st.button("Clear Chat"):
         st.session_state.chats = []
