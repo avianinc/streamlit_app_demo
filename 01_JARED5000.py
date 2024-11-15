@@ -266,7 +266,8 @@ def main():
     # Fetch list of models from the Ollama client
     try:
         models_info = client.models.list()
-        model_names = [model.id for model in models_info.data]  # Fixed line to access model IDs correctly
+        # Exclude LLava models from the model list
+        model_names = [model.id for model in models_info.data if 'llava' not in model.id.lower()]
         logging.info("Fetched models from Ollama server.")
     except Exception as e:
         st.error(f"Error fetching models from Ollama server: {e}")
@@ -277,8 +278,13 @@ def main():
         st.warning("No models available on the Ollama server. Please download a model using the sidebar.")
         logging.warning("No models available on the Ollama server.")
     else:
+        # Set default model
+        default_model = "llama3.2:1b"
+        if default_model not in model_names:
+            default_model = model_names[0]  # Fallback to the first model if default is not available
+
         # Model selector
-        selected_model = st.selectbox("Select a model to use", model_names)
+        selected_model = st.selectbox("Select a model to use", model_names, index=model_names.index(default_model))
 
     # Option to clear existing data
     clear_data = st.checkbox("Clear existing data before uploading new files")
@@ -341,8 +347,11 @@ def main():
                     st.sidebar.error(f"Error deleting data from Qdrant: {e}")
                     logging.error(f"Error deleting data from Qdrant: {e}")
 
+    # Checkbox to display extracted content
+    display_content = st.checkbox("Display extracted content from files", value=False)
+
     # Display extracted content
-    if existing_files:
+    if display_content and existing_files:
         with st.expander("View Extracted Content from Files"):
             for file in existing_files:
                 extracted_text = extract_text_from_file(file)
