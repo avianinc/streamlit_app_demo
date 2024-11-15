@@ -377,11 +377,17 @@ def main():
 
     # Display chat history
     for chat in st.session_state.history:
-        st.chat_message(chat['role']).markdown(chat['content'])
+        with st.chat_message(chat['role']):
+            st.markdown(chat['content'])
 
     # User input for chat
     user_input = st.chat_input("Ask a question about the files")
+
     if user_input and model_names:
+        # Display user's message
+        with st.chat_message("user"):
+            st.markdown(user_input)
+        # Append user's message to the chat history
         st.session_state.history.append({"role": "user", "content": user_input})
         logging.info(f"User input: {user_input}")
 
@@ -389,18 +395,26 @@ def main():
         relevant_chunks = get_relevant_chunks(user_input, top_k=5)
         context = "\n".join(relevant_chunks)
 
-        # Prepare the prompt
+        # Build conversation history
+        conversation = ""
+        for chat in st.session_state.history:
+            role = chat['role']
+            content = chat['content']
+            conversation += f"{role.capitalize()}: {content}\n"
+
+        # Prepare the prompt with conversation history
         prompt = (
-            f"You are a helpful assistant. Answer the following question using the provided context. "
+            f"You are a helpful assistant. Continue the following conversation using the provided context. "
             f"Do not mention the context or search results in your answer. Think through the answer internally, "
             f"and provide a concise and clear response to the user.\n\n"
             f"Context:\n{context}\n\n"
-            f"Question:\n{user_input}"
+            f"Conversation:\n{conversation}\n"
+            f"Assistant:"
         )
 
         # Send the prompt to the Ollama server using OpenAI client
         try:
-            # Display a message that the assistant is typing
+            # Display the assistant's response
             with st.chat_message("assistant"):
                 message_placeholder = st.empty()
                 response_text = ""
