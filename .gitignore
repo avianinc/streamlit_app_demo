@@ -16,3 +16,6 @@ ollama_models/
 
 # Docker files
 docker-compose.override.yml
+
+# No logs
+*.log
