@@ -417,7 +417,6 @@ def main():
             # Display the assistant's response
             with st.chat_message("assistant"):
                 message_placeholder = st.empty()
-                response_text = ""
 
                 # Send request with streaming
                 response = client.completions.create(

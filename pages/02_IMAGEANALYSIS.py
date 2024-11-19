@@ -42,7 +42,7 @@ def download_model_with_progress(model_name):
         "Accept": "application/json",
     }
     data = {"name": model_name}
-    
+
     try:
         response = requests.post(API_URL, json=data, headers=headers, stream=True)
         progress_bar = st.progress(0)
@@ -60,7 +60,7 @@ def download_model_with_progress(model_name):
                         percent_complete = int((downloaded_size / total_size) * 100)
                         progress_bar.progress(percent_complete)
                         progress_text.text(f"Downloading: {downloaded_size}/{total_size} bytes ({percent_complete}%)")
-                        
+
                     elif progress_data.get("status") == "success":
                         progress_bar.progress(100)
                         progress_text.text(f"Download complete: {model_name}")
@@ -102,20 +102,20 @@ def main():
             )
             if st.button(f"Download {model_to_download}"):
                 download_model_with_progress(model_to_download)
-                st.rerun()  # Only rerun here when model download is done
+                st.experimental_rerun()  # Only rerun here when model download is done
         else:
             if missing_models:
                 model_to_download = st.selectbox("Download missing model", list(missing_models))
                 if st.button(f"Download {model_to_download}"):
                     download_model_with_progress(model_to_download)
-                    st.rerun()  # Rerun when model download is complete
+                    st.experimental_rerun()  # Rerun when model download is complete
 
             selected_model = st.selectbox("Delete model", available_models)
             if st.button(f"Delete {selected_model}"):
                 try:
                     response = requests.delete(f"http://ollama:11434/v1/models/{selected_model}")
                     st.success(f"Deleted model: {selected_model}")
-                    st.rerun()  # Trigger a rerun after model deletion
+                    st.experimental_rerun()  # Trigger a rerun after model deletion
                 except Exception as e:
                     st.error(f"Failed to delete model: {selected_model}. Error: {str(e)}")
 
@@ -127,9 +127,9 @@ def main():
     if "chats" not in st.session_state:
         st.session_state.chats = []
 
-    # To avoid the repeated responses issue, add a flag to track if the request is processing
-    if "response_processed" not in st.session_state:
-        st.session_state.response_processed = False
+    # Remove the response_processed flag as we no longer need it
+    # if "response_processed" not in st.session_state:
+    #     st.session_state.response_processed = False
 
     uploaded_file = st.file_uploader("Upload an image for analysis", type=["png", "jpg", "jpeg"])
 
@@ -150,20 +150,15 @@ def main():
 
     with col1:
         if uploaded_file:
-            # Display chat history
-            for message in st.session_state.chats:
-                avatar = "🌋" if message["role"] == "assistant" else "🫠"
-                st.markdown(f"**{message['role'].capitalize()}**: {message['content']}")
-
             # Handle user input
             user_input = st.text_input("Question about the image...", key="user_input")
             submit = st.button("Submit")
 
-            if submit and user_input and not st.session_state.response_processed:
+            if submit and user_input:
                 # Include OCR text as context for the user's question
                 context = f"OCR Extracted Text: {st.session_state.get('ocr_text', '')}\n\nQuestion: {user_input}"
                 st.session_state.chats.append({"role": "user", "content": user_input})
-                
+
                 image_base64 = img_to_base64(image)
                 API_URL = "http://ollama:11434/api/generate"
                 headers = {
@@ -176,7 +171,6 @@ def main():
                     "images": [image_base64],
                 }
 
-                st.session_state.chats.append({"role": "assistant", "content": "Processing..."})
                 response_text = ""
 
                 with st.spinner("Processing..."):
@@ -195,14 +189,17 @@ def main():
                         response_text = f"Failed to get a response from {selected_model}."
 
                 # Update chat with the assistant's response
-                st.session_state.chats[-1]["content"] = response_text
-                st.session_state.response_processed = True  # Mark response as processed
-                st.experimental_rerun()  # Force rerun to display the response
+                st.session_state.chats.append({"role": "assistant", "content": response_text})
+
+            # Display chat history after processing
+            for message in st.session_state.chats:
+                avatar = "🌋" if message["role"] == "assistant" else "🫠"
+                st.markdown(f"**{message['role'].capitalize()}**: {message['content']}")
 
     if st.button("Clear Chat"):
         st.session_state.chats = []
-        st.session_state.response_processed = False  # Reset processing flag
-        st.rerun()  # Clear everything and rerun the app
+        # st.session_state.response_processed = False  # Reset processing flag
+        # No need to rerun the app; the chat will be cleared in the next execution cycle
 
 if __name__ == "__main__":
     main()
